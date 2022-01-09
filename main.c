@@ -1,28 +1,22 @@
 #include <stdio.h>
-#include "node.h"
+#include <string.h>
 
-void print(struct node *n,int count,int ans[]){
-
-    if(!n->left&&!n->right){
-        for(int i=0;i<count;i++){
-            printf("%d ",ans[i]);
-        }
-        printf("%d\n",n->data);
-        return ;
+int printstr(char c,int k,int l,int n,int in,int used){
+    static int count=0;
+    if(count==n){
+        return 0;
     }
 
-    ans[count] = n->data;
-    if(n->left){
-        print(n->left,count+1,ans);
-    }
-    if(n->right){
-        print(n->right,count+1,ans);
-    }
-    
-    return;
+    int 
 }
 
-void print_all_paths(struct node *root){
-    int ans[1000];
-    print(root,0,ans);
+int main() {
+    
+    int k,l,n;
+    char c[2];
+    scanf("%s%d%d%d",c,&k,&l,&n);
+
+    printstr(c[0],k,l,n);
+
+    return 0;
 }
